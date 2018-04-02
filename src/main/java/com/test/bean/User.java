@@ -1,9 +1,10 @@
 package com.test.bean;
 
-import java.util.Date;
+
+import java.sql.Date;
 
 public class User {
-    private String id;
+    private Integer id;
     private String username;
     private String sex;
     private Date birthday;
@@ -16,11 +17,15 @@ public class User {
         this.address = address;
     }
 
-    public String getId() {
-        return id;
+    public User(Integer id, String username, String sex, Date birthday, String address) {
+        this.id = id;
+        this.username = username;
+        this.sex = sex;
+        this.birthday = birthday;
+        this.address = address;
     }
 
-    public void setId(String id) {
+    public User(Integer id) {
         this.id = id;
     }
 
