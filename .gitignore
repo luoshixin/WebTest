@@ -1,1 +1,4 @@
+target/
+MybatisTest.iml
+.idea/
 /src/main/resources/db.properties

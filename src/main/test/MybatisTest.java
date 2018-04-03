@@ -20,6 +20,9 @@ public class MybatisTest {
         User user = userMapper.findUserById(1);
 //        User user = sqlSession.selectOne("com.test.dao.UserMapper.findUserById", 1);
         sqlSession.close();
+
+
+
         System.out.println("结果：" + user);
     }
 
