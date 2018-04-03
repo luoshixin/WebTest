@@ -1,0 +1,4 @@
+target/
+MybatisTest.iml
+.idea/
+db.properties
