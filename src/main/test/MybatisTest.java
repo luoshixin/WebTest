@@ -22,7 +22,7 @@ public class MybatisTest {
         sqlSession.close();
 
 
-        
+
         System.out.println("结果：" + user);
     }
 
