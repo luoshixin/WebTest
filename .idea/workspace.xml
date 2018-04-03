@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fc84e476-5263-433f-80ed-7c318cb4d951" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db.properties" afterPath="$PROJECT_DIR$/src/main/resources/db.properties" />
-    </list>
+    <list default="true" id="fc84e476-5263-433f-80ed-7c318cb4d951" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="src/main/resources/db.properties" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +40,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="87">
-              <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="17" />
+              <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -137,7 +136,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>AngularJS</id>
+            <id>Android</id>
           </State>
         </selected-state>
       </profile-state>
@@ -195,7 +194,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path" value="node" />
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Ignored.Files" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -393,7 +392,7 @@
       <workItem from="1522304537240" duration="8398000" />
       <workItem from="1522380941857" duration="8146000" />
       <workItem from="1522639520208" duration="12054000" />
-      <workItem from="1522720517437" duration="1407000" />
+      <workItem from="1522720517437" duration="1706000" />
     </task>
     <servers />
   </component>
@@ -430,7 +429,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30110000" />
+    <option name="totallyTimeSpent" value="30409000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -775,7 +774,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/db.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
-          <caret line="3" column="17" lean-forward="false" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="17" />
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -839,7 +838,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
