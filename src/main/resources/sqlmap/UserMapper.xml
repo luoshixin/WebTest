@@ -10,7 +10,11 @@ parameterType：mapper接口方法参数类型
 resultType：mapper接口的返回值类型
 -->
 <mapper namespace="com.test.dao.UserMapper">
-    <select id="findUserById" parameterType="int" resultType="com.test.bean.User">
+    <select id="findUserById" parameterType="int" resultType="user">
             SELECT * FROM USER WHERE id=#{id};
+    </select>
+
+    <select id="findUserByName" parameterType="user" resultType="user">
+        SELECT * FROM USER WHERE username=#{username};
     </select>
 </mapper>

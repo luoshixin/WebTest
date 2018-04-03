@@ -11,6 +11,13 @@
         <setting name="logImpl" value="STDOUT_LOGGING"/>
     </settings>
 
+    <typeAliases>
+        <!--针对单个POJO定义别名-->
+        <!--<typeAlias type="com.test.bean.User" alias="user"/>-->
+        <!--批量定义别名，mybatis自动扫描指定包中的POJO类，自动定义别名，别名就是类名，首字母大小写都可以-->
+        <package name="com.test.bean"/>
+    </typeAliases>
+
     <!--和Spring整合以后environments配置将废除-->
     <environments default="development">
         <environment id="development">
@@ -28,6 +35,11 @@
 
     <!--加载映射文件-->
     <mappers>
+        <!--方式一：加载mapper映射文件-->
         <mapper resource="sqlmap/UserMapper.xml"/>
+        <!--&lt;!&ndash;方式二：加载mapper接口（前提：mapper接口类名和mapper.xml映射文件的名称保持一致，且在同一个目录中，且使用的mapper代理方法）&ndash;&gt;-->
+        <!--<mapper class="com.test.dao.UserMapper"/>-->
+        <!--&lt;!&ndash;方式三：批量加载（推荐）（前提：mapper接口类名和mapper.xml映射文件的名称保持一致，且在同一个目录中，且使用的mapper代理方法）&ndash;&gt;-->
+        <!--<package name="com.test.dao"/>-->
     </mappers>
 </configuration>

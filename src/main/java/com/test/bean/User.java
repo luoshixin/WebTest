@@ -1,6 +1,10 @@
 package com.test.bean;
 
 
+import org.apache.ibatis.annotations.Result;
+import org.apache.ibatis.annotations.ResultMap;
+import org.apache.ibatis.annotations.ResultType;
+
 import java.sql.Date;
 
 public class User {
@@ -9,6 +13,9 @@ public class User {
     private String sex;
     private Date birthday;
     private String address;
+
+    public User() {
+    }
 
     public User(String username, String sex, Date birthday, String address) {
         this.username = username;

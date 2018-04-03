@@ -13,17 +13,19 @@ import java.util.List;
 
 public class MybatisTest {
     @Test
-    public void test0() throws Exception {
+    public void test0() throws Exception{
+
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("SqlMapConfig.xml"));
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-        User user = userMapper.findUserById(1);
+//        User user = userMapper.findUserById(1);
 //        User user = sqlSession.selectOne("com.test.dao.UserMapper.findUserById", 1);
+
+        User user = new User();
+
+        System.out.println("结果：" + userMapper.findUserByName(user));
         sqlSession.close();
 
-
-
-        System.out.println("结果：" + user);
     }
 
 
