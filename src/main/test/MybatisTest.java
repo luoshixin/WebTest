@@ -18,12 +18,9 @@ public class MybatisTest {
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("SqlMapConfig.xml"));
         SqlSession sqlSession = sqlSessionFactory.openSession();
         UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
-//        User user = userMapper.findUserById(1);
-//        User user = sqlSession.selectOne("com.test.dao.UserMapper.findUserById", 1);
-
-        User user = new User();
-
-        System.out.println("结果：" + userMapper.findUserByName(user));
+        int[] ids = {10, 11, 12};
+        List<User> userList = userMapper.findUserByIds(ids);
+        System.out.println("结果：" + userList);
         sqlSession.close();
 
     }
