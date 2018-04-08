@@ -1,55 +1,28 @@
 package com.test.bean;
 
-
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.ResultMap;
-import org.apache.ibatis.annotations.ResultType;
-
-import java.sql.Date;
+import java.util.Date;
 
 public class User {
     private Integer id;
-    private String username;
-    private String sex;
+    private String userName;
     private Date birthday;
+    private String sex;
     private String address;
 
-    public User() {
+    public Integer getId() {
+        return id;
     }
 
-    public User(String username, String sex, Date birthday, String address) {
-        this.username = username;
-        this.sex = sex;
-        this.birthday = birthday;
-        this.address = address;
-    }
-
-    public User(Integer id, String username, String sex, Date birthday, String address) {
-        this.id = id;
-        this.username = username;
-        this.sex = sex;
-        this.birthday = birthday;
-        this.address = address;
-    }
-
-    public User(Integer id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    public String getSex() {
-        return sex;
-    }
-
-    public void setSex(String sex) {
-        this.sex = sex;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public Date getBirthday() {
@@ -58,6 +31,14 @@ public class User {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    public String getSex() {
+        return sex;
+    }
+
+    public void setSex(String sex) {
+        this.sex = sex;
     }
 
     public String getAddress() {
@@ -72,9 +53,9 @@ public class User {
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", username='" + username + '\'' +
-                ", sex='" + sex + '\'' +
+                ", userName='" + userName + '\'' +
                 ", birthday=" + birthday +
+                ", sex='" + sex + '\'' +
                 ", address='" + address + '\'' +
                 '}';
     }

@@ -1,30 +1,31 @@
-import com.test.bean.User;
-import com.test.dao.UserMapper;
+import com.test.bean.Orders;
+import com.test.mapper.OrdersMapper;
 import org.apache.ibatis.io.Resources;
+import org.apache.ibatis.ognl.enhance.OrderedReturn;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.util.Date;
 import java.util.List;
 
 public class MybatisTest {
-    @Test
-    public void test0() throws Exception{
 
-        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("SqlMapConfig.xml"));
-        SqlSession sqlSession = sqlSessionFactory.openSession();
-        UserMapper userMapper = sqlSession.getMapper(UserMapper.class);
+    private SqlSessionFactory sqlSessionFactory;
 
-        int[] ids = {1, 2};
-        List<User> userList = userMapper.findUserByIds(ids);
-        System.out.println("结果：" + userList);
-        sqlSession.close();
-
+    @Before
+    public void init() throws IOException {
+        sqlSessionFactory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsStream("SqlMapConfig.xml"));
     }
 
+    @Test
+    public void test0() throws Exception{
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+        OrdersMapper odersMapper = sqlSession.getMapper(OrdersMapper.class);
+        List<Orders> orders = odersMapper.findOrdersUser();
+        sqlSession.close();
+    }
 
 }

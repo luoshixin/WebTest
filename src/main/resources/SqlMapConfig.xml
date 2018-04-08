@@ -35,11 +35,7 @@
 
     <!--加载映射文件-->
     <mappers>
-        <!--方式一：加载mapper映射文件-->
-        <mapper resource="sqlmap/UserMapper.xml"/>
-        <!--&lt;!&ndash;方式二：加载mapper接口（前提：mapper接口类名和mapper.xml映射文件的名称保持一致，且在同一个目录中，且使用的mapper代理方法）&ndash;&gt;-->
-        <!--<mapper class="com.test.dao.UserMapper"/>-->
-        <!--&lt;!&ndash;方式三：批量加载（推荐）（前提：mapper接口类名和mapper.xml映射文件的名称保持一致，且在同一个目录中，且使用的mapper代理方法）&ndash;&gt;-->
-        <!--<package name="com.test.dao"/>-->
+        <mapper resource="sqlmap/OrdersMapper.xml"/>
+
     </mappers>
 </configuration>
