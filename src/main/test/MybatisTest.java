@@ -26,6 +26,9 @@ public class MybatisTest {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         OrdersMapper odersMapper = sqlSession.getMapper(OrdersMapper.class);
         List<Orders> ordersList = odersMapper.findOrdersUserLazyLoading();
+        for(Orders orders : ordersList){
+            System.out.println("数据：" + orders.getUser());
+        }
         sqlSession.close();
     }
 }

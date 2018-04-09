@@ -1,12 +1,142 @@
 {\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf200
-{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 Menlo-Regular;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red225\green179\blue88;\red32\green32\blue32;\red109\green109\blue109;
+\red172\green172\blue172;\red88\green118\blue71;\red153\green168\blue186;\red254\green187\blue91;\red191\green100\blue38;
+\red133\green96\blue154;\red173\green169\blue32;}
+{\*\expandedcolortbl;;\csgenericrgb\c88235\c70196\c34510;\csgenericrgb\c12549\c12549\c12549;\csgenericrgb\c42745\c42745\c42745;
+\csgenericrgb\c67451\c67451\c67451;\csgenericrgb\c34510\c46275\c27843;\csgenericrgb\c60000\c65882\c72941;\csgenericrgb\c99608\c73333\c35686;\csgenericrgb\c74902\c39216\c14902;
+\csgenericrgb\c52157\c37647\c60392;\csgenericrgb\c67843\c66275\c12549;}
 \paperw11900\paperh16840\margl1440\margr1440\vieww19760\viewh14580\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\fs36 \cf0 \'b2\'b9\'b3\'e4\'a3\'baresultType\'b2\'bb\'be\'df\'d3\'d0\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8\'b5\'c4\'cc\'d8\'d0\'d4\'a3\'acresultMap\'be\'df\'d3\'d0\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8\'b5\'c4\'cc\'d8\'d0\'d4\
 \
-\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8\'a3\'ba\'cf\'c8\'b4\'d3\'b5\'a5\'b1\'ed\'b2\'e9\'d1\'af\'a3\'ac\'d0\'e8\'d2\'aa\'ca\'b1\'d4\'da\'b4\'d3\'b9\'d8\'c1\'aa\'b1\'ed\'b2\'e9\'d1\'af\'a3\'ac\'b4\'f3\'b4\'f3\'cc\'e1\'b8\'df\'ca\'fd\'be\'dd\'bf\'e2\'b5\'c4\'d0\'d4\'c4\'dc\'a3\'ac\'d2\'f2\'ce\'aa\'b2\'e9\'d1\'af\'b5\'a5\'b1\'ed\'d2\'aa\'b1\'c8\'b9\'d8\'c1\'aa\'b2\'e9\'d1\'af\'b6\'e0\'d5\'c5\'b1\'ed\'d2\'aa\'bf\'ec\
+\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8\'a3\'ba\'cf\'c8\'b4\'d3\'b5\'a5\'b1\'ed\'b2\'e9\'d1\'af\'a3\'ac\'d0\'e8\'d2\'aa\'ca\'b1\'d4\'d9\'b4\'d3\'b9\'d8\'c1\'aa\'b1\'ed\'b2\'e9\'d1\'af\'a3\'ac\'b4\'f3\'b4\'f3\'cc\'e1\'b8\'df\'ca\'fd\'be\'dd\'bf\'e2\'b5\'c4\'d0\'d4\'c4\'dc\'a3\'ac\'d2\'f2\'ce\'aa\'b2\'e9\'d1\'af\'b5\'a5\'b1\'ed\'d2\'aa\'b1\'c8\'b9\'d8\'c1\'aa\'b2\'e9\'d1\'af\'b6\'e0\'d5\'c5\'b1\'ed\'d2\'aa\'bf\'ec\'a1\'a3\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8\'b5\'c4\'b1\'be\'d6\'ca\'be\'cd\'ca\'c7\'b0\'b4\'d0\'e8\'bc\'d3\'d4\'d8\'a3\'ac\'cf\'c8\'c8\'a5\'b2\'e9\'d1\'af\'bc\'f2\'b5\'a5\'b5\'c4SQL\'a3\'a8\'d7\'ee\'ba\'c3\'ca\'c7\'b5\'a5\'b1\'ed\'a3\'ac\'d2\'b2\'bf\'c9\'d2\'d4\'ca\'c7\'b9\'d8\'c1\'aa\'b2\'e9\'d1\'af\'a3\'a9\'a3\'ac\'d4\'d9\'c8\'a5\'b0\'b4\'d0\'e8\'bc\'d3\'d4\'d8\'b9\'d8\'c1\'aa\'b5\'c4\'d0\'c5\'cf\'a2\
+\
+1\'a1\'a2\'bf\'aa\'c6\'f4\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8\'b9\'a6\'c4\'dc\'a3\'ac\'d4\'daSqlMapConfig.xml\'bc\'d3\'c8\'eb\'c8\'e7\'cf\'c2\'c5\'e4\'d6\'c3\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf2 \cb3 <settings>\
+    \cf4 <!--
+\f0 \'d4\'da\'bf\'d8\'d6\'c6\'cc\'a8\'ca\'e4\'b3\'f6
+\f1 mybatis
+\f0 \'b5\'c4\'d0\'c5\'cf\'a2
+\f1 -->\
+    \cf2 <setting \cf5 name\cf6 ="logImpl" \cf5 value\cf6 ="STDOUT_LOGGING"\cf2 />\
+    \cf4 <!-- 
+\f0 \'b4\'f2\'bf\'aa\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8\'b5\'c4\'bf\'aa\'b9\'d8
+\f1  -->\
+    \cf2 <setting \cf5 name\cf6 ="lazyLoadingEnabled" \cf5 value\cf6 ="true"\cf2 />\
+    \cf4 <!-- 
+\f0 \'bd\'ab\'bb\'fd\'bc\'ab\'bc\'d3\'d4\'d8\'b8\'c4\'ce\'aa\'cf\'fb\'bc\'ab\'bc\'d3\'d4\'d8
+\f1 (
+\f0 \'bc\'b0\'b0\'b4\'d0\'e8\'bc\'d3\'d4\'d8
+\f1 ) -->\
+    \cf2 <setting \cf5 name\cf6 ="aggressiveLazyLoading" \cf5 value\cf6 ="false"\cf2 />\
+</settings>\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+2\'a1\'a2\'b1\'e0\'d0\'b4mapper.xml\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf7 \cb3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf2 \cb3 <mapper \cf5 namespace\cf6 ="com.test.mapper.OrdersMapper"\cf2 >\
+    <resultMap \cf5 id\cf6 ="findOrdersUserLazyLoadingResultMap" \cf5 type\cf6 ="com.test.bean.Orders"\cf2 >\
+        <id \cf5 property\cf6 ="id" \cf5 column\cf6 ="id"\cf2 />\
+        <result \cf5 property\cf6 ="number" \cf5 column\cf6 ="number"\cf2 />\
+        <result \cf5 property\cf6 ="note" \cf5 column\cf6 ="note"\cf2 />\
+        <result \cf5 property\cf6 ="createTime" \cf5 column\cf6 ="createtime"\cf2 />\
+        <result \cf5 property\cf6 ="userId" \cf5 column\cf6 ="user_id"\cf2 />\
+        \cf4 <!--\
+         
+\f0 \'ca\'b5\'cf\'d6\'b6\'d4
+\f1 user
+\f0 \'b5\'c4\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8
+\f1 \
+         select
+\f0 \'a3\'ba\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8\'ca\'b1\'d2\'aa\'d6\'b4\'d0\'d0\'b5\'c4
+\f1 statement
+\f0 \'b5\'c4
+\f1 id\
+         column
+\f0 \'a3\'ba\'b8\'f9\'be\'dd
+\f1 user_id
+\f0 \'b2\'e9\'d1\'af
+\f1 user\
+         <collection>
+\f0 \'b1\'ea\'c7\'a9\'b5\'c4\'d1\'d3\'b3\'d9\'bc\'d3\'d4\'d8\'d2\'b2\'ca\'c7\'d2\'bb\'d1\'f9\'b5\'c4\'c5\'e4\'d6\'c3
+\f1 \
+        -->\
+        \cf2 <association \cf5 property\cf6 ="user" \cf5 select\cf6 ="findUserById" \cf5 column\cf6 ="user_id"\cf2 />\
+\
+    </resultMap>\
+    \
+    <select \cf5 id\cf6 ="findOrdersUserLazyLoading" \cf5 resultMap\cf6 ="findOrdersUserLazyLoadingResultMap"\cf2 >\
+      \cf7 \cb3 SELECT \cf8 * \cf7 FROM orders\
+    \cf2 \cb3 </select>\
+\
+    <select \cf5 id\cf6 ="findUserById" \cf5 parameterType\cf6 ="int" \cf5 resultType\cf6 ="com.test.bean.User"\cf2 >\
+        \cf7 \cb3 SELECT \cf8 * \cf7 FROM user WHERE id = #\{id\}\
+    \cf2 \cb3 </select>\
+</mapper>\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+\
+3\'a1\'a2\'b1\'e0\'d0\'b4mapper.java\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f2\fs32 \cf7 \cb3 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf9 \cb3 public interface \cf7 \cb3 OrdersMapper \{\
+    \cf9 \cb3 public \cf7 \cb3 List<Orders> \cf8 findOrdersUserLazyLoading\cf7 () \cf9 \cb3 throws \cf7 \cb3 Exception\cf9 \cb3 ;\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf7 \cb3 \}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+4\'a1\'a2\'b1\'e0\'d0\'b4\'b2\'e2\'ca\'d4\'c0\'e0\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1\fs32 \cf9 \cb3 public class \cf7 \cb3 MybatisTest \{\
+\
+    \cf9 \cb3 private \cf7 \cb3 SqlSessionFactory \cf10 \cb3 sqlSessionFactory\cf9 \cb3 ;\
+\
+    \cf11 \cb3 @Before\
+    \cf9 \cb3 public void \cf8 \cb3 init\cf7 () \cf9 \cb3 throws \cf7 \cb3 IOException \{\
+        \cf10 \cb3 sqlSessionFactory \cf7 \cb3 = \cf9 \cb3 new \cf7 \cb3 SqlSessionFactoryBuilder().build(Resources.
+\f3\i \cf7 \cb3 getResourceAsStream
+\f1\i0 \cf7 \cb3 (\cf6 \cb3 "SqlMapConfig.xml"\cf7 \cb3 ))\cf9 \cb3 ;\
+    \cf7 \cb3 \}\
+\
+    \cf11 \cb3 @Test\
+    \cf9 \cb3 public void \cf8 \cb3 test0\cf7 () \cf9 \cb3 throws \cf7 \cb3 Exception \{\
+        SqlSession sqlSession = \cf10 \cb3 sqlSessionFactory\cf7 \cb3 .openSession()\cf9 \cb3 ;\
+        \cf7 \cb3 OrdersMapper odersMapper = sqlSession.getMapper(OrdersMapper.\cf9 \cb3 class\cf7 \cb3 )\cf9 \cb3 ;\
+        \cf7 \cb3 List<Orders> ordersList = odersMapper.findOrdersUserLazyLoading()\cf9 \cb3 ;\
+        for\cf7 \cb3 (Orders orders : ordersList)\{\
+            System.
+\f3\i \cf10 \cb3 out
+\f1\i0 \cf7 \cb3 .println(\cf6 \cb3 "
+\f0 \'ca\'fd\'be\'dd\'a3\'ba
+\f1 " \cf7 \cb3 + orders.getUser())\cf9 \cb3 ;\
+        \cf7 \cb3 \}\
+        sqlSession.close()\cf9 \cb3 ;\
+    \cf7 \cb3 \}\
+\}\
+\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \cb1 \
+\
+\
+\
+\
 \
 }

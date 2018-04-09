@@ -3,15 +3,18 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.test.mapper.OrdersMapper">
-
-
     <resultMap id="findOrdersUserLazyLoadingResultMap" type="com.test.bean.Orders">
         <id property="id" column="id"/>
         <result property="number" column="number"/>
         <result property="note" column="note"/>
         <result property="createTime" column="createtime"/>
         <result property="userId" column="user_id"/>
-        
+        <!--
+         实现对user的延迟加载
+         select：延迟加载时要执行的statement的id
+         column：根据user_id查询user
+         <collection>标签的延迟加载也是一样的配置
+        -->
         <association property="user" select="findUserById" column="user_id"/>
 
     </resultMap>
