@@ -10,6 +10,9 @@
         <result column="createtime" property="createTime"/>
         <result column="note" property="note"/>
 
+        <!--
+        <association>：用于映射关联查询中单个对象的信息
+        -->
         <association property="user" javaType="com.test.bean.User">
             <id column="user_id" property="id"/>
             <result column="username" property="userName"/>
@@ -17,6 +20,8 @@
             <result column="sex" property="sex"/>
             <result column="address" property="address"/>
         </association>
+        <collection property="">
+        </collection>
     </resultMap>
     
     <select id="findOrdersUser" resultMap="ordersUserResultMap">
