@@ -1,6 +1,8 @@
 package com.test.bean;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Orders {
     private Integer id;
@@ -10,6 +12,7 @@ public class Orders {
     private String note;
 
     private User user;
+    private List<OrderDetail> orderDetailList = new ArrayList<OrderDetail>();
 
     public Integer getId() {
         return id;
@@ -59,6 +62,14 @@ public class Orders {
         this.user = user;
     }
 
+    public List<OrderDetail> getOrderDetailList() {
+        return orderDetailList;
+    }
+
+    public void setOrderDetailList(List<OrderDetail> orderDetailList) {
+        this.orderDetailList = orderDetailList;
+    }
+
     @Override
     public String toString() {
         return "Orders{" +
@@ -68,6 +79,7 @@ public class Orders {
                 ", createTime=" + createTime +
                 ", note='" + note + '\'' +
                 ", user=" + user +
+                ", orderDetailList=" + orderDetailList +
                 '}';
     }
 }

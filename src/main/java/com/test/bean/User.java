@@ -4,10 +4,9 @@ import java.util.Date;
 
 public class User {
     private Integer id;
-    private String userName;
+    private String username;
     private Date birthday;
     private String sex;
-    private String address;
 
     public Integer getId() {
         return id;
@@ -17,12 +16,12 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Date getBirthday() {
@@ -41,22 +40,13 @@ public class User {
         this.sex = sex;
     }
 
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", userName='" + userName + '\'' +
+                ", username='" + username + '\'' +
                 ", birthday=" + birthday +
                 ", sex='" + sex + '\'' +
-                ", address='" + address + '\'' +
                 '}';
     }
 }

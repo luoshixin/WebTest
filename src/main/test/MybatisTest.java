@@ -1,4 +1,5 @@
 import com.test.bean.Orders;
+import com.test.bean.User;
 import com.test.mapper.OrdersMapper;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.ognl.enhance.OrderedReturn;
@@ -21,11 +22,10 @@ public class MybatisTest {
     }
 
     @Test
-    public void test0() throws Exception{
+    public void test0() throws Exception {
         SqlSession sqlSession = sqlSessionFactory.openSession();
         OrdersMapper odersMapper = sqlSession.getMapper(OrdersMapper.class);
-        List<Orders> orders = odersMapper.findOrdersUser();
+        List<Orders> ordersList = odersMapper.findOrdersUserLazyLoading();
         sqlSession.close();
     }
-
 }
