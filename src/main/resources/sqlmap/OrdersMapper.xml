@@ -3,6 +3,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.test.mapper.OrdersMapper">
+    <cache/>
+
     <resultMap id="findOrdersUserLazyLoadingResultMap" type="com.test.bean.Orders">
         <id property="id" column="id"/>
         <result property="number" column="number"/>
@@ -26,4 +28,9 @@
     <select id="findUserById" parameterType="int" resultType="com.test.bean.User">
         SELECT * FROM user WHERE id = #{id}
     </select>
+
+    <update id="updateUserName">
+        UPDATE user SET username = #{username} WHERE id = #{id};
+    </update>
+
 </mapper>
