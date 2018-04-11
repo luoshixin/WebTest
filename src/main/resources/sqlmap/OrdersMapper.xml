@@ -3,7 +3,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.test.mapper.OrdersMapper">
-    <cache/>
+    <!--
+    type：指定cache接扣的实现类型
+    -->
+    <cache type="org.mybatis.caches.ehcache.EhcacheCache"/>
 
     <resultMap id="findOrdersUserLazyLoadingResultMap" type="com.test.bean.Orders">
         <id property="id" column="id"/>
