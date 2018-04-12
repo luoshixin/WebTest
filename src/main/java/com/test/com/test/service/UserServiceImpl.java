@@ -1,7 +1,6 @@
 package com.test.com.test.service;
 
 import com.test.bean.User;
-import com.test.dao.UserDao;
 
 public class UserServiceImpl implements UserService{
 

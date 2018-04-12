@@ -35,16 +35,21 @@
     <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
         <property name="configLocation" value="classpath:mybatis/mybatis-configuration.xml"/>
+        dsfs
+        <property name="mapperLocations" value="classpath:mybatis"/>
     </bean>
 
-    <bean id="userDao" class="com.test.dao.UserDaoImpl">
-        <property name="sqlSessionFactory" ref="sqlSessionFactoryBean"/>
+    <!--
+    mapper批量扫描，从指定包中mapper接口，自动创建道理对象并且注册到Spring容器中，这些mapper的bean的name是mapper.java的类型，首字母小写；
+    遵循的规范：mapper.java和mapper.xml的文件要同名并且在同一目录下。这种情况况下就不用再mybatis的核心文件中配置加载mapper.xml文件了，如果想把mapper.xml
+    文件放在其他目录下，可以通过    加载进来
+    -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <!--指定扫描mapper的包名，如果有多个包中间使用半角逗号分隔-->
+        <property name="basePackage" value="com.test.dao"/>
+        <!--sqlSessionFactoryBeanName这个属性是String类型，所以使用的是value而不是ref-->
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"/>
     </bean>
-
-    <bean id="userService" class="com.test.com.test.service.UserServiceImpl">
-        <property name="userDao" ref="userDao"/>
-    </bean>
-
 
     <!--事物管理器-->
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">

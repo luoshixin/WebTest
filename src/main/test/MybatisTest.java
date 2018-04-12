@@ -1,7 +1,6 @@
 import com.test.bean.User;
 import com.test.com.test.service.UserService;
 import com.test.com.test.service.UserServiceImpl;
-import com.test.dao.UserDao;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
