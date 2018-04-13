@@ -20,8 +20,9 @@
         <package name="com.test.bean"/>
     </typeAliases>
 
-    <!--加载映射文件-->
-    <mappers>
-        <mapper resource="mybatis/UserMapper.xml"/>
-    </mappers>
+    <!--&lt;!&ndash;加载映射文件&ndash;&gt;-->
+    <!--&lt;!&ndash;不在这里配置了，和spring整合后再spring的核心文件里面配置，交个spring来加载&ndash;&gt;-->
+    <!--<mappers>-->
+        <!--<mapper resource="mybatis/UserMapper.xml"/>-->
+    <!--</mappers>-->
 </configuration>
