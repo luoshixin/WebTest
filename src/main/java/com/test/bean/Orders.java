@@ -1,18 +1,17 @@
 package com.test.bean;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 
 public class Orders {
     private Integer id;
-    private Integer userId;
-    private String number;
-    private Date createTime;
-    private String note;
 
-    private User user;
-    private List<OrderDetail> orderDetailList = new ArrayList<OrderDetail>();
+    private Integer userId;
+
+    private String number;
+
+    private Date createtime;
+
+    private String note;
 
     public Integer getId() {
         return id;
@@ -35,15 +34,15 @@ public class Orders {
     }
 
     public void setNumber(String number) {
-        this.number = number;
+        this.number = number == null ? null : number.trim();
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 
     public String getNote() {
@@ -51,35 +50,6 @@ public class Orders {
     }
 
     public void setNote(String note) {
-        this.note = note;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public List<OrderDetail> getOrderDetailList() {
-        return orderDetailList;
-    }
-
-    public void setOrderDetailList(List<OrderDetail> orderDetailList) {
-        this.orderDetailList = orderDetailList;
-    }
-
-    @Override
-    public String toString() {
-        return "Orders{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", number='" + number + '\'' +
-                ", createTime=" + createTime +
-                ", note='" + note + '\'' +
-                ", user=" + user +
-                ", orderDetailList=" + orderDetailList +
-                '}';
+        this.note = note == null ? null : note.trim();
     }
 }

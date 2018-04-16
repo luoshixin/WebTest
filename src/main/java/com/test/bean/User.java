@@ -1,13 +1,17 @@
 package com.test.bean;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class User implements Serializable {
+public class User {
     private Integer id;
+
     private String username;
+
     private Date birthday;
+
     private String sex;
+
+    private String address;
 
     public Integer getId() {
         return id;
@@ -22,7 +26,7 @@ public class User implements Serializable {
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        this.username = username == null ? null : username.trim();
     }
 
     public Date getBirthday() {
@@ -38,16 +42,14 @@ public class User implements Serializable {
     }
 
     public void setSex(String sex) {
-        this.sex = sex;
+        this.sex = sex == null ? null : sex.trim();
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", birthday=" + birthday +
-                ", sex='" + sex + '\'' +
-                '}';
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address == null ? null : address.trim();
     }
 }
