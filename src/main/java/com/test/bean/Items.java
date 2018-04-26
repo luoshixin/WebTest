@@ -2,7 +2,7 @@ package com.test.bean;
 
 import java.util.Date;
 
-public class Items {
+public class  Items {
     private Integer id;
 
     private String name;

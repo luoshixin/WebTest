@@ -1,14 +1,17 @@
 package com.test.controller;
 
 import com.test.bean.Items;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.mvc.Controller;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ItemsController implements Controller{
-    public ModelAndView handleRequest(javax.servlet.http.HttpServletRequest httpServletRequest, javax.servlet.http.HttpServletResponse httpServletResponse) throws Exception {
+@Controller
+public class ItemController1 {
+    @RequestMapping(" ")
+    public ModelAndView findItemList(){
         List<Items> itemsList = new ArrayList<Items>();
 
         Items items0 = new Items();
@@ -29,4 +32,5 @@ public class ItemsController implements Controller{
         modelAndView.setViewName("/WEB-INF/jsp/itemList.jsp");
         return modelAndView;
     }
+
 }

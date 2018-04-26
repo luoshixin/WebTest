@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--导入事务和AOP相关的命名空间-->
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
@@ -14,9 +13,6 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <!--扫描指定包下面的注解类（包括子包和孙包中的），将这些注解类注册到spring容器-->
-    <context:component-scan base-package="com.test"/>
-    <!--加载类路径下的db.properties文件-->
     <context:property-placeholder location="classpath:db.properties"/>
 
     <!--配置数据源-->
@@ -31,46 +27,18 @@
         <property name="acquireIncrement" value="${jdbc.acquireIncrement}"></property>
     </bean>
 
+
     <!--mybatis SqlSessionFactory 的工厂bean-->
     <bean id="sqlSessionFactoryBean" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
-        <property name="configLocation" value="classpath:mybatis/mybatis-configuration.xml"/>
+        <property name="configLocation" value="classpath:mybatis/mybatis-config.xml"/>
         <!--加载mapper.xml文件, 或者在mybatis的核心文件里面配置加载也是一样的-->
-        <property name="mapperLocations" value="classpath*:mybatis/*Mapper.xml"/>
+        <property name="mapperLocations" value="classpath*:mybatis/mapper/*Mapper.xml"/>
     </bean>
 
-
-    <!--
-    mapper批量扫描，从指定的包中扫描mapper.java文件，创建代理对象注册到spring容器中，生成的bean的name是mapper类名（搜字母小写）。
-    注意规范：mapper.java和mapper.xml文件应该放在同一个目录下,
-    如果不在同一个目录下，可以通过<property name="mapperLocations"来配置或者配置在mybatis的核心配置文件里面配置
-    -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <!--指定扫描mapper.java的包，如果有多个可以用半角的逗号隔开-->
         <property name="basePackage" value="com.test.dao"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"/>
     </bean>
 
-
-
-    <!--事物管理器-->
-    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
-        <property name="dataSource" ref="dataSource"/>
-    </bean>
-
-
-    <!--配置事物增强，拦截到方法之后如何管理事物-->
-    <tx:advice id="txAdvice" transaction-manager="txManager">
-        <tx:attributes>
-            <tx:method name="*" isolation="DEFAULT" propagation="REQUIRED" read-only="false"/>
-        </tx:attributes>
-    </tx:advice>
-
-    <!--AOP配置（织入）-->
-    <aop:config>
-        <aop:pointcut id="pt" expression="execution(* com.test.com.test.service.*.*(..))"/>
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="pt"/>
-    </aop:config>
-
 </beans>
-

@@ -15,19 +15,26 @@ public class MybatisTest {
 
     @Before
     public void init(){
-        ac = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
+        ac = new ClassPathXmlApplicationContext("classpath:spring/spring-*.xml");
     }
 
     @Test
     public void test() throws Exception {
         UserMapper userMapper = ac.getBean("userMapper", UserMapper.class);
-        OrdersMapper ordersMapper = ac.getBean("ordersMapper", OrdersMapper.class);
+//        OrdersMapper ordersMapper = ac.getBean("ordersMapper", OrdersMapper.class);
+//
+//        OrdersExample ordersExample = new OrdersExample();
+//        OrdersExample.Criteria criteria = ordersExample.createCriteria();
+//        criteria.andUserIdEqualTo(1);
+//        criteria.like
 
-        OrdersExample ordersExample = new OrdersExample();
-        OrdersExample.Criteria criteria = ordersExample.createCriteria();
-        criteria.andUserIdEqualTo(1);
+        UserExample userExample = new UserExample();
+        UserExample.Criteria criteria = userExample.createCriteria();
+        criteria.andUsernameLike("%王%");
 
-        ordersMapper.selectByExample(ordersExample);
+        userMapper.selectByExample(userExample);
+
+
 
     }
 
