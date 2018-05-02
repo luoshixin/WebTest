@@ -15,27 +15,28 @@
 </head>
 <body>
 
-<%
-    List<Items> itemsList = (List<Items>) request.getAttribute("itemsList");
-    System.out.println("数据3：" + itemsList);
-%>
-
+<form method="post" action="/user/editUserListSubmit">
 <table border="1">
     <tr>
-        <th>商品名称</th>
-        <th>商品价格</th>
-        <th>商品描述</th>
+        <th>选择</th>
+        <th>用户名</th>
+        <th>性别</th>
+        <th>地址</th>
     </tr>
 
-    <c:forEach items="${itemsList}" var="item">
+    <c:forEach items="${userList}" var="user" varStatus="status">
         <tr>
-            <td>${item.name}</td>
-            <td>${item.price}</td>
-            <td>${item.detail}</td>
+            <td><input type="checkbox" name="map['id']" value="${user.id}"> </td>
+            <td><input type="text" name="map['username']" value="${user.username}"></td>
+            <%--<td><input type="text" name="birthday" id="">${user.birthday}</td>--%>
+            <td><input type="text" name="map['sex']" value="${user.sex}"></td>
+            <td><input type="text" name="map['address']" value="${user.address}"></td>
         </tr>
     </c:forEach>
 
 </table>
+    <input type="submit">
+</form>
 
 
 </body>

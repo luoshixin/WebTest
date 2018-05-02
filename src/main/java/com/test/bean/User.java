@@ -13,6 +13,8 @@ public class User {
 
     private String address;
 
+    private String headImgUrl;
+
     public Integer getId() {
         return id;
     }
@@ -51,5 +53,25 @@ public class User {
 
     public void setAddress(String address) {
         this.address = address == null ? null : address.trim();
+    }
+
+    public String getHeadImgUrl() {
+        return headImgUrl;
+    }
+
+    public void setHeadImgUrl(String headImgUrl) {
+        this.headImgUrl = headImgUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", birthday=" + birthday +
+                ", sex='" + sex + '\'' +
+                ", address='" + address + '\'' +
+                ", headImgUrl='" + headImgUrl + '\'' +
+                '}';
     }
 }
