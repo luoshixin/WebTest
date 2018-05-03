@@ -1,6 +1,8 @@
 package com.test.bean;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class User {
     private Integer id;
@@ -14,6 +16,8 @@ public class User {
     private String address;
 
     private String headImgUrl;
+
+    private List<Orders> ordersList = new ArrayList<Orders>();
 
     public Integer getId() {
         return id;
@@ -61,6 +65,14 @@ public class User {
 
     public void setHeadImgUrl(String headImgUrl) {
         this.headImgUrl = headImgUrl;
+    }
+
+    public List<Orders> getOrdersList() {
+        return ordersList;
+    }
+
+    public void setOrdersList(List<Orders> ordersList) {
+        this.ordersList = ordersList;
     }
 
     @Override

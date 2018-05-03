@@ -11,18 +11,30 @@
 <html>
 <head>
     <title>填写用户资料</title>
+    <script src="/static/js/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+        function sendJson() {
+            $.ajax({
+                type: "POST",
+                url: "/user/addUser",
+                contentType: "application/json",
+                data: JSON.stringify({'username': '张三', sex: '男', address: '四川省'}),
+                dataType: "json",
+                statusCode: {
+                    404: function () {
+                        alert('page not found');
+                    }
+                },
+                success: function (data, textStatus) {
+                    alert(data + "" + textStatus);
+                }
+            });
+        }
+    </script>
 </head>
 <body>
 
-<form method="post" action="/user/addUser" enctype="multipart/form-data">
-    <p>名字：<input type="text" name="username"></p>
-    <p>性别：<input type="text" name="sex"></p>
-    <p>住址：<input type="text" name="address"></p>
-    <p>头像：<input type="file" name="headImgFile"></p>
-    <p>头像：<input type="file" name="headImgFile"></p>
-    <p>头像：<input type="file" name="headImgFile"></p>
-    <input type="submit">
-</form>
+<p><input type="button" value="提交json" onclick="sendJson()"></p>
 
 </body>
 </html>
