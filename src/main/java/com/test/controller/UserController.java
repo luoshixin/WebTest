@@ -79,10 +79,21 @@ public class UserController {
      * @RequestBody ：用于将HTTP请求中的json数据转换为java对象
      * @ResponseBody ：用于将返回值转化成Java对象
      */
-    @RequestMapping(value = "/addUser", method = RequestMethod.POST)
-    public @ResponseBody User addUser(@RequestBody User user){
-        System.out.println("提交的数据：" + user);
+    @RequestMapping(value = "/addUser", method = {RequestMethod.POST, RequestMethod.GET})
+    public @ResponseBody User addUser(){
+        System.out.println("提交的数据");
 
+        return new User();
+    }
+
+    /**
+     * @PathVariable
+     */
+    @RequestMapping("/{id}")
+    public @ResponseBody User userView(@PathVariable("id") Integer userId) throws Exception {
+        System.out.println("参数：" + userId);
+        User user = userService.findUserById(userId);
+        System.out.println("数据：" + user);
         return user;
     }
 

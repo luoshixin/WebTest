@@ -26,7 +26,6 @@
                     }
                 },
                 success: function (data, textStatus) {
-                    alert(data + "" + textStatus);
                 }
             });
         }
